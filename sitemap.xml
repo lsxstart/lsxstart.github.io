@@ -2,6 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lsxstart.github.io/404.html</loc>
+    
+    <lastmod>2025-03-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsxstart.github.io/friends/index.html</loc>
+    
+    <lastmod>2025-03-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsxstart.github.io/contact/index.html</loc>
+    
+    <lastmod>2025-03-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsxstart.github.io/about/index.html</loc>
+    
+    <lastmod>2025-03-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsxstart.github.io/tags/index.html</loc>
+    
+    <lastmod>2025-03-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lsxstart.github.io/archives/b24dd347.html</loc>
     
     <lastmod>2022-04-26</lastmod>
@@ -40,7 +85,7 @@
 
   <url>
     <loc>https://lsxstart.github.io/</loc>
-    <lastmod>2022-04-26</lastmod>
+    <lastmod>2025-03-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -48,21 +93,21 @@
   
   <url>
     <loc>https://lsxstart.github.io/tags/spring/</loc>
-    <lastmod>2022-04-26</lastmod>
+    <lastmod>2025-03-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lsxstart.github.io/tags/blog/</loc>
-    <lastmod>2022-04-26</lastmod>
+    <lastmod>2025-03-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lsxstart.github.io/tags/commonlife/</loc>
-    <lastmod>2022-04-26</lastmod>
+    <lastmod>2025-03-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -71,14 +116,14 @@
   
   <url>
     <loc>https://lsxstart.github.io/categories/spring/</loc>
-    <lastmod>2022-04-26</lastmod>
+    <lastmod>2025-03-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lsxstart.github.io/categories/commonlife/</loc>
-    <lastmod>2022-04-26</lastmod>
+    <lastmod>2025-03-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

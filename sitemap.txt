@@ -1,3 +1,8 @@
+https://lsxstart.github.io/404.html
+https://lsxstart.github.io/friends/index.html
+https://lsxstart.github.io/contact/index.html
+https://lsxstart.github.io/about/index.html
+https://lsxstart.github.io/tags/index.html
 https://lsxstart.github.io/archives/b24dd347.html
 https://lsxstart.github.io/archives/1e6fc079.html
 https://lsxstart.github.io/categories/index.html
