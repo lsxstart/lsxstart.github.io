@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="文章分类, java 前后端">
+    <meta name="keywords" content="第五讲_字符串, java 前后端">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>文章分类 | lsxstart/lsxstart</title>
+    <title>第五讲_字符串 | lsxstart/lsxstart</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">文章分类</h1>
+                    <h1 class="description center-align post-title">第五讲_字符串</h1>
                 </div>
             </div>
         </div>
@@ -432,12 +432,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">语法基础</span>
+                            </a>
+                        
+                            <a href="/tags/c/">
+                                <span class="chip bg-color">c++</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/acwing/" class="post-category">
+                                acwing
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -446,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-25
+                    2025-03-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-25
+                    2025-03-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    515
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -490,7 +507,83 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h4 id="单词替换"><a href="#单词替换" class="headerlink" title="单词替换"></a>单词替换</h4><p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/772/">https://www.acwing.com/problem/content/772/</a></p>
+<details class="lake-collapse"><summary id="u643d2344"><span class="ne-text" style="color: rgb(51, 51, 51); font-size: 16px">输入一个字符串，以回车结束（字符串长度不超过 </span><span class="ne-text" style="color: rgb(51, 51, 51); font-size: 19px">100</span><span class="ne-text" style="color: rgb(51, 51, 51); font-size: 16px">100）。该字符串由若干个单词组成，单词之间用一个空格隔开，所有单词区分大小写。现需要将其中的某个单词替换成另一个单词，并输出替换之后的字符串。</span></summary><p id="u03226e8e" class="ne-p"><span class="ne-text" style="font-size: 16px"></span></p><p id="u95495b90" class="ne-p"><span class="ne-text" style="font-size: 16px">三种解决方法</span></p><ol class="ne-ol"><li id="u8527ab4e" data-lake-index-type="0"><span class="ne-text" style="font-size: 16px">将原始字符串中的每个单词（以空格间隔）存储到字符串数组中，遍历这个数组，如果遇到s1，输出s2，否则输出原始单词  （注意）这里用getchar()读入空格</span></li><li id="u0849d7ae" data-lake-index-type="0"><span class="ne-text" style="font-size: 16px">将所有的单词都读入字符串数组中，如果遇到str[n-2]，就输出str[n-1]，否则输出原始单词</span></li><li id="u32ffb4a5" data-lake-index-type="0"><span class="ne-text" style="font-size: 16px">借助string中的函数find(),replace()等</span></li></ol><p id="u97322098" class="ne-p"><img src="https://cdn.nlark.com/yuque/0/2024/png/28565788/1716946354827-24c044c2-c73d-4d1b-a1c1-5a35e04a7da6.png" width="516" id="u23b3a55f" class="ne-image"></p></details>
+
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;string&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+string str<span class="token punctuation">[</span><span class="token number">100000</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">//第一种方法</span>
+    <span class="token comment">//将原字符串按照单词存储到字符串数组中</span>
+    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">//记录单词数量</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>cin <span class="token operator">&gt;&gt;</span> str<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        n<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token keyword">char</span> x <span class="token operator">=</span> <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//接收空格</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>x <span class="token operator">==</span> <span class="token char">'\n'</span><span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span> <span class="token comment">//如果是换行符 说明原始字符串读入完毕</span>
+    <span class="token punctuation">}</span>
+    
+    string s1<span class="token punctuation">,</span>s2<span class="token punctuation">;</span>
+    cin <span class="token operator">&gt;&gt;</span> s1 <span class="token operator">&gt;&gt;</span> s2<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>str<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> s1<span class="token punctuation">)</span>    cout <span class="token operator">&lt;&lt;</span> s2 <span class="token operator">&lt;&lt;</span> <span class="token char">' '</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span> cout <span class="token operator">&lt;&lt;</span> str<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token char">' '</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;string&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+string str<span class="token punctuation">[</span><span class="token number">100000</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">//第二种方法 直接读入所有的字符串</span>
+    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">//记录读入的单词个数</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>cin <span class="token operator">&gt;&gt;</span> str<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">)</span> n<span class="token operator">++</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">//str[n - 2] 被替换的单词  str[n - 1] 是替换的单词</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>k <span class="token operator">&lt;</span> n <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">;</span>k<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>str<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">==</span> str<span class="token punctuation">[</span>n <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>    cout <span class="token operator">&lt;&lt;</span> str<span class="token punctuation">[</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token char">' '</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span> cout <span class="token operator">&lt;&lt;</span> str<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token char">' '</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;string&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    string str<span class="token punctuation">;</span>
+    <span class="token function">getline</span><span class="token punctuation">(</span>cin<span class="token punctuation">,</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    string s1<span class="token punctuation">,</span>s2<span class="token punctuation">;</span>
+    cin <span class="token operator">&gt;&gt;</span> s1 <span class="token operator">&gt;&gt;</span> s2<span class="token punctuation">;</span>
+    <span class="token comment">//处理加工 忽略首尾情况</span>
+    str <span class="token operator">=</span> <span class="token char">' '</span> <span class="token operator">+</span> str <span class="token operator">+</span> <span class="token char">' '</span><span class="token punctuation">;</span>
+    s1 <span class="token operator">=</span> <span class="token char">' '</span> <span class="token operator">+</span> s1 <span class="token operator">+</span> <span class="token char">' '</span><span class="token punctuation">;</span>
+    s2 <span class="token operator">=</span> <span class="token char">' '</span> <span class="token operator">+</span> s2 <span class="token operator">+</span> <span class="token char">' '</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">while</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment">//找到就替换</span>
+        str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">,</span>s1<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>s2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">//删除首尾空格</span>
+    str<span class="token punctuation">.</span><span class="token function">erase</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    str<span class="token punctuation">.</span><span class="token function">erase</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    cout <span class="token operator">&lt;&lt;</span> str <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4>
                 
             </div>
             <hr/>
@@ -516,7 +609,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lsxstart.github.io/categories/index.html">https://lsxstart.github.io/categories/index.html</a>
+                    <a href="https://lsxstart.github.io/archives/17aa545b.html">https://lsxstart.github.io/archives/17aa545b.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -553,7 +646,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">语法基础</span>
+                                </a>
+                            
+                                <a href="/tags/c/">
+                                    <span class="chip bg-color">c++</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -721,18 +822,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/archives/6be25c2a.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="文章分类">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="第六讲_函数">
                         
-                        <span class="card-title">文章分类</span>
+                        <span class="card-title">第六讲_函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -742,18 +842,33 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-25
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-03-19
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            lsxstart/lsxstart
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/acwing/" class="post-category">
+                                    acwing
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">语法基础</span>
+                    </a>
+                    
+                    <a href="/tags/c/">
+                        <span class="chip bg-color">c++</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -761,16 +876,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/archives/bbb1aa8.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="文章分类">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="第四讲_数组">
                         
-                        <span class="card-title">文章分类</span>
+                        <span class="card-title">第四讲_数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -781,17 +896,32 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-03-19
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            lsxstart/lsxstart
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/acwing/" class="post-category">
+                                    acwing
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">语法基础</span>
+                    </a>
+                    
+                    <a href="/tags/c/">
+                        <span class="chip bg-color">c++</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

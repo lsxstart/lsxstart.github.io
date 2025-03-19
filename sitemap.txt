@@ -1,3 +1,13 @@
+https://lsxstart.github.io/archives/bbb1aa8.html
+https://lsxstart.github.io/archives/6be25c2a.html
+https://lsxstart.github.io/archives/dd8eb0e.html
+https://lsxstart.github.io/archives/ae01c867.html
+https://lsxstart.github.io/archives/17aa545b.html
+https://lsxstart.github.io/archives/eb631d2c.html
+https://lsxstart.github.io/archives/16f0da5a.html
+https://lsxstart.github.io/archives/f706052b.html
+https://lsxstart.github.io/archives/a0e5e832.html
+https://lsxstart.github.io/archives/7631ad8a.html
 https://lsxstart.github.io/404.html
 https://lsxstart.github.io/friends/index.html
 https://lsxstart.github.io/contact/index.html
@@ -11,5 +21,9 @@ https://lsxstart.github.io/
 https://lsxstart.github.io/tags/spring/
 https://lsxstart.github.io/tags/blog/
 https://lsxstart.github.io/tags/commonlife/
+https://lsxstart.github.io/tags/%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/
+https://lsxstart.github.io/tags/c/
+https://lsxstart.github.io/tags/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/
 https://lsxstart.github.io/categories/spring/
 https://lsxstart.github.io/categories/commonlife/
+https://lsxstart.github.io/categories/acwing/

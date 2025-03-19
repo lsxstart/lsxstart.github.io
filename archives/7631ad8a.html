@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="文章分类, java 前后端">
+    <meta name="keywords" content="第二讲 判断语句, java 前后端">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>文章分类 | lsxstart/lsxstart</title>
+    <title>第二讲 判断语句 | lsxstart/lsxstart</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">文章分类</h1>
+                    <h1 class="description center-align post-title">第二讲 判断语句</h1>
                 </div>
             </div>
         </div>
@@ -432,12 +432,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">语法基础</span>
+                            </a>
+                        
+                            <a href="/tags/c/">
+                                <span class="chip bg-color">c++</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/acwing/" class="post-category">
+                                acwing
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -446,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-25
+                    2025-03-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-25
+                    2025-03-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    594
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -490,7 +507,112 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><img src="https://cdn.nlark.com/yuque/0/2024/png/28565788/1713256825239-2ef94962-2b41-44c3-a9aa-7865cd249c18.png"></p>
+<h3 id="整理问题"><a href="#整理问题" class="headerlink" title="整理问题"></a>整理问题</h3><h4 id="A662-点的坐标"><a href="#A662-点的坐标" class="headerlink" title="A662.点的坐标"></a>A662.点的坐标</h4><p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/664/">https://www.acwing.com/problem/content/664/</a></p>
+<p>:::success<br>利用三目运算符可以使得代码更加简洁</p>
+<p>:::</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token comment">//配合三目运算符</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">double</span> x<span class="token punctuation">,</span>y<span class="token punctuation">;</span>
+    cin <span class="token operator">&gt;&gt;</span> x <span class="token operator">&gt;&gt;</span> y<span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>x <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> y <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Origem"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span> x <span class="token operator">*</span> y <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>x <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token string">"Eixo Y"</span> <span class="token operator">:</span> <span class="token string">"Eixo X"</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>x <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>y <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token string">"Q1"</span> <span class="token operator">:</span> <span class="token string">"Q4"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>x <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>y <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token string">"Q2"</span> <span class="token operator">:</span> <span class="token string">"Q3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="A666-三角形类型"><a href="#A666-三角形类型" class="headerlink" title="A666. 三角形类型"></a>A666. 三角形类型</h4><p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/submission/668/">https://www.acwing.com/problem/content/submission/668/</a></p>
+<p>:::success</p>
+<ol>
+<li>输入三个数 将他们依次从大到小存储<ol>
+<li>借用<algorithm>中的swap函数实现降序功能</algorithm></li>
+</ol>
+</li>
+<li>判断三个数相等 判断条件不能写成(a==b==c) 应该写(a==b&amp;&amp;a==c)</li>
+</ol>
+<p>:::</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">;</span>
+<span class="token comment">//降序排列</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>a <span class="token operator">&lt;</span> b<span class="token punctuation">)</span> <span class="token function">swap</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>a <span class="token operator">&lt;</span> c<span class="token punctuation">)</span> <span class="token function">swap</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>b <span class="token operator">&lt;</span> c<span class="token punctuation">)</span> <span class="token function">swap</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+
+
+
+
+<h4 id="A668-游戏时间2"><a href="#A668-游戏时间2" class="headerlink" title="A668. 游戏时间2"></a>A668. 游戏时间2</h4><p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/670/">https://www.acwing.com/problem/content/670/</a></p>
+<p>:::success<br>两种思路</p>
+<ol>
+<li>利用分钟相减，时钟相减，然后分钟不够时钟来补的思路<ol>
+<li>分钟不够，小时来借</li>
+<li>小时不够，加上24</li>
+<li>相差刚好24</li>
+</ol>
+</li>
+<li>先计算出相差时间（分钟），然后通过加上预设的一天再对整体取余能够求出实际相差的分钟数，不过要注意结果如果为0，那便是刚好一整天，通过三目运算符解决一下特殊情况</li>
+</ol>
+<p>:::</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;cstdio&gt;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">,</span>d<span class="token punctuation">;</span>
+    cin <span class="token operator">&gt;&gt;</span> a <span class="token operator">&gt;&gt;</span> b <span class="token operator">&gt;&gt;</span> c <span class="token operator">&gt;&gt;</span> d<span class="token punctuation">;</span>
+    <span class="token comment">//d - b 找分钟 c - a找小时</span>
+    
+    <span class="token comment">//处理几种情况</span>
+    
+    <span class="token comment">//1. 分钟不够拿小时借</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>d <span class="token operator">&lt;</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        c <span class="token operator">-=</span> <span class="token number">1</span><span class="token punctuation">;</span> 
+        d <span class="token operator">+=</span> <span class="token number">60</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">//2. 小时不够24补上</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>a <span class="token operator">&gt;</span> c<span class="token punctuation">)</span> c <span class="token operator">+=</span> <span class="token number">24</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">//3.正好24h</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>a <span class="token operator">==</span> c <span class="token operator">&amp;&amp;</span> b <span class="token operator">==</span> d<span class="token punctuation">)</span> c <span class="token operator">+=</span> <span class="token number">24</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n"</span><span class="token punctuation">,</span>c<span class="token operator">-</span>a<span class="token punctuation">,</span>d<span class="token operator">-</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">,</span>d<span class="token punctuation">;</span>
+    cin <span class="token operator">&gt;&gt;</span> a <span class="token operator">&gt;&gt;</span> b <span class="token operator">&gt;&gt;</span> c <span class="token operator">&gt;&gt;</span>d<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> min1<span class="token punctuation">,</span>min2<span class="token punctuation">;</span>
+    <span class="token comment">//准确计算相差时间</span>
+    min1 <span class="token operator">=</span> b <span class="token operator">+</span> a <span class="token operator">*</span> <span class="token number">60</span><span class="token punctuation">;</span>  <span class="token comment">//转为分钟计算</span>
+    min2 <span class="token operator">=</span> d <span class="token operator">+</span> c <span class="token operator">*</span> <span class="token number">60</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">//通过加上预设的一天再整体取余可以保证这个分钟数小于1440（24 * 60 ）</span>
+    a <span class="token operator">=</span> <span class="token punctuation">(</span>min2 <span class="token operator">-</span> min1 <span class="token operator">+</span> <span class="token number">24</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token punctuation">(</span><span class="token number">24</span> <span class="token operator">*</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">//考虑特殊情况就是 相差刚好为一天 也就是a 是否为0</span>
+    a <span class="token operator">=</span> a <span class="token operator">?</span> a <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token number">24</span> <span class="token operator">*</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n"</span><span class="token punctuation">,</span>a <span class="token operator">/</span> <span class="token number">60</span><span class="token punctuation">,</span>a <span class="token operator">%</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>   
+    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
                 
             </div>
             <hr/>
@@ -516,7 +638,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lsxstart.github.io/categories/index.html">https://lsxstart.github.io/categories/index.html</a>
+                    <a href="https://lsxstart.github.io/archives/7631ad8a.html">https://lsxstart.github.io/archives/7631ad8a.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -553,7 +675,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">语法基础</span>
+                                </a>
+                            
+                                <a href="/tags/c/">
+                                    <span class="chip bg-color">c++</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -721,18 +851,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/archives/a0e5e832.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="文章分类">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="第一讲_c++入门及简单的顺序结构">
                         
-                        <span class="card-title">文章分类</span>
+                        <span class="card-title">第一讲_c++入门及简单的顺序结构</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -742,18 +871,33 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-25
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-03-19
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            lsxstart/lsxstart
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/acwing/" class="post-category">
+                                    acwing
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">语法基础</span>
+                    </a>
+                    
+                    <a href="/tags/c/">
+                        <span class="chip bg-color">c++</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -761,37 +905,49 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/archives/1e6fc079.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="文章分类">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Spring框架概述">
                         
-                        <span class="card-title">文章分类</span>
+                        <span class="card-title">Spring框架概述</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Spring 框架概述1. spring
+Spring 是轻量的、开源的JavaEE 框架
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-26
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            lsxstart/lsxstart
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/spring/" class="post-category">
+                                    spring
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/spring/">
+                        <span class="chip bg-color">spring</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
