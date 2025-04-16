@@ -558,9 +558,9 @@ int main(){
 <p>（2）一维情况下枚举背包容量<strong>需要逆序</strong>，如果正序，则需要一个辅助数组来保留上一层更新后的状态。</p>
 <p>逆序理由：在二维情况下，状态 <code>f[i][j]</code>是由上一轮 <code>i-1</code> 的状态得到的，<code>f[i][j]</code>与 <code>f[i-1][j]</code>是相互独立的。当优化到一维后，如果还是正序，则有<code>f[较小体积] </code>更新 <code>f[较大体积]</code> ，即有可能本应该用第 <code>i - 1 </code>的状态缺用的是第 <code>i </code>轮的状态。</p>
 <p>正序的情况：</p>
-<p><img src="/archives/桌面\11.png" alt="正序情况"></p>
+<p><img src="/archives/study\blog\source_posts\动态规划-背包问题\正序情况.png"></p>
 <p>逆序的情况：</p>
-<p><img src="/archives/桌面\12.png" alt="逆序情况"></p>
+<p><img src="/archives/study\blog\source_posts\逆序情况-17447893222025.png" alt="逆序情况"></p>
 <p>（3） 通俗来说，一维情况下正序更新状态<code>f[j]</code>需要用到前面计算的状态已经被【污染】，逆序则不会有这样的问题。</p>
 <p>（4） 关于状态<code>f[j]</code>的补充说明</p>
 <p>​		二维下的状态定义 <code>f[i][j]</code>是 前 i  件物品，背包容量 j 的最大价值。一维下，少了前 i 件物品这个维度，代码中决策到第 i  件物品（循环到第 i 轮），<code>f[j]</code>就是前<code>i</code>轮已经决策的物品且背包容量 j 下的最大价值。</p>
