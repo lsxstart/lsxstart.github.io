@@ -507,11 +507,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="一、0-1-背包"><a href="#一、0-1-背包" class="headerlink" title="一、0-1 背包"></a>一、0-1 背包</h4><h6 id="1-题目介绍"><a href="#1-题目介绍" class="headerlink" title="1. 题目介绍"></a>1. 题目介绍</h6><hr>
+                <h3 id="一、0-1-背包"><a href="#一、0-1-背包" class="headerlink" title="一、0-1 背包"></a>一、0-1 背包</h3><h4 id="1-题目介绍"><a href="#1-题目介绍" class="headerlink" title="1. 题目介绍"></a>1. 题目介绍</h4><hr>
 <p>有 <em><strong>N</strong></em> 件物品和一个容量是 <em><strong>V</strong></em> 的背包，每件物品有各自的价值且<u>只能被选择一次</u>，要求在有限地背包容量下，装入物品地总价值最大。</p>
 <p>[0-1背包] 是较为简单的动态规划问题，也是其余背包问题的基础。</p>
 <p>动态规划是不断决策求最优解的过程，[0-1背包]就是不断地对第 <em>i</em>  个 物品进行决策，[0-1] 就代表选与不选两种决定。</p>
-<h6 id="2-题解代码"><a href="#2-题解代码" class="headerlink" title="2. 题解代码"></a>2. 题解代码</h6><hr>
+<h4 id="2-题解代码"><a href="#2-题解代码" class="headerlink" title="2. 题解代码"></a>2. 题解代码</h4><hr>
 <p>2.1  二维数组版本</p>
 <p>(1) 状态 <code>f[i][j]</code> 定义：<strong>前 <em>i</em> 个 物品，背包容量 <em>j</em> 下的最大价值</strong></p>
 <ul>
@@ -558,9 +558,9 @@ int main(){
 <p>（2）一维情况下枚举背包容量<strong>需要逆序</strong>，如果正序，则需要一个辅助数组来保留上一层更新后的状态。</p>
 <p>逆序理由：在二维情况下，状态 <code>f[i][j]</code>是由上一轮 <code>i-1</code> 的状态得到的，<code>f[i][j]</code>与 <code>f[i-1][j]</code>是相互独立的。当优化到一维后，如果还是正序，则有<code>f[较小体积] </code>更新 <code>f[较大体积]</code> ，即有可能本应该用第 <code>i - 1 </code>的状态缺用的是第 <code>i </code>轮的状态。</p>
 <p>正序的情况：</p>
-<p><img src="/archives/study\blog\source_posts\动态规划-背包问题\正序情况.png"></p>
+<p><strong><img src="/archives/43cd3863/%E6%AD%A3%E5%BA%8F%E6%83%85%E5%86%B5.png" class=""></strong></p>
 <p>逆序的情况：</p>
-<p><img src="/archives/study\blog\source_posts\逆序情况-17447893222025.png" alt="逆序情况"></p>
+<p><strong><img src="/archives/43cd3863/%E9%80%86%E5%BA%8F%E6%83%85%E5%86%B5.png" class=""></strong></p>
 <p>（3） 通俗来说，一维情况下正序更新状态<code>f[j]</code>需要用到前面计算的状态已经被【污染】，逆序则不会有这样的问题。</p>
 <p>（4） 关于状态<code>f[j]</code>的补充说明</p>
 <p>​		二维下的状态定义 <code>f[i][j]</code>是 前 i  件物品，背包容量 j 的最大价值。一维下，少了前 i 件物品这个维度，代码中决策到第 i  件物品（循环到第 i 轮），<code>f[j]</code>就是前<code>i</code>轮已经决策的物品且背包容量 j 下的最大价值。</p>
@@ -596,7 +596,7 @@ int main(){
 
 
 
-<h4 id="二、完全背包"><a href="#二、完全背包" class="headerlink" title="二、完全背包"></a>二、完全背包</h4>
+<h3 id="二、完全背包"><a href="#二、完全背包" class="headerlink" title="二、完全背包"></a>二、完全背包</h3>
                 
             </div>
             <hr/>
