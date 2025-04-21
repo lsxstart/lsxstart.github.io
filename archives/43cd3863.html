@@ -470,21 +470,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2025-04-16
+                    2025-04-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    975
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    7 分
                 </div>
                 
 
@@ -508,6 +508,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h3 id="一、0-1-背包"><a href="#一、0-1-背包" class="headerlink" title="一、0-1 背包"></a>一、0-1 背包</h3><h4 id="1-题目介绍"><a href="#1-题目介绍" class="headerlink" title="1. 题目介绍"></a>1. 题目介绍</h4><hr>
+<p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/2/">01背包原题链接</a></p>
 <p>有 <em><strong>N</strong></em> 件物品和一个容量是 <em><strong>V</strong></em> 的背包，每件物品有各自的价值且<u>只能被选择一次</u>，要求在有限地背包容量下，装入物品地总价值最大。</p>
 <p>[0-1背包] 是较为简单的动态规划问题，也是其余背包问题的基础。</p>
 <p>动态规划是不断决策求最优解的过程，[0-1背包]就是不断地对第 <em>i</em>  个 物品进行决策，[0-1] 就代表选与不选两种决定。</p>
@@ -596,7 +597,94 @@ int main(){
 
 
 
-<h3 id="二、完全背包"><a href="#二、完全背包" class="headerlink" title="二、完全背包"></a>二、完全背包</h3>
+<h3 id="二、完全背包"><a href="#二、完全背包" class="headerlink" title="二、完全背包"></a>二、完全背包</h3><h4 id="1-题目介绍-1"><a href="#1-题目介绍-1" class="headerlink" title="1. 题目介绍"></a>1. 题目介绍</h4><hr>
+<p>有 <em><strong>N</strong></em> 件物品和一个容量是 <em><strong>V</strong></em> 的背包，每件物品有各自的价值且<u>可以无限选择</u>，要求在有限地背包容量下，装入物品地总价值最大。</p>
+<p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/3/">完全背包原题链接</a></p>
+<h4 id="2-闫式DP分析"><a href="#2-闫式DP分析" class="headerlink" title="2. 闫式DP分析"></a>2. 闫式DP分析</h4><p><strong><img src="/archives/43cd3863/%E9%97%AB%E5%BC%8FDP_%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85.png" class=""></strong></p>
+<h4 id="3-题解代码"><a href="#3-题解代码" class="headerlink" title="3. 题解代码"></a>3. 题解代码</h4><h5 id="三重循环版本"><a href="#三重循环版本" class="headerlink" title="三重循环版本"></a>三重循环版本</h5><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;iostream&gt;
+
+using namespace std;
+
+const int N = 1010;
+
+int v[N],w[N];
+int f[N][N];
+int n,m;
+
+int main(){
+    //朴素做法
+    cin &gt;&gt; n &gt;&gt; m;
+    for(int i = 1;i &lt;= n;i++) cin &gt;&gt; v[i] &gt;&gt; w[i];
+
+    for(int i = 1;i &lt;= n;i++)
+        for(int j = 1;j &lt;= m;j++){
+            f[i][j] = f[i - 1][j];
+            if(j &gt;= v[i]) f[i][j] = max(f[i][j],f[i][j - v[i]] + w[i]);
+        }
+
+    cout &lt;&lt; f[n][m] &lt;&lt; endl;
+    return 0;
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>该版本因为是三重循环，由于N是10 ^ 3级，故时间复杂度可能会到10 ^ 9级，会超时，出现TLE错误，故需要对其优化。</p>
+<h5 id="优化思路"><a href="#优化思路" class="headerlink" title="优化思路"></a>优化思路</h5><p>更新次序的内部关系为：</p>
+<pre class="line-numbers language-none"><code class="language-none">f[i , j ] = max( f[i-1,j] , f[i-1,j-v]+w ,  f[i-1,j-2*v]+2*w , f[i-1,j-3*v]+3*w , .....)
+f[i , j-v]= max(            f[i-1,j-v]   ,  f[i-1,j-2*v] + w , f[i-1,j-3*v]+2*w , .....)
+由上两式，可得出如下递推关系： 
+                        f[i][j]=max( f[i-1][j] ,  f[i,j-v]+w ) <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>因此k循环可以舍弃，核心代码可以优化为:</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for(int i = 1;i &lt;= n;i++)
+    for(int j = 1;j &lt;= m;j++){
+        f[i][j] = f[i - 1][j];
+        if(j &gt;= v[i]) f[i][j] = max(f[i][j],f[i][j - v[i]] + w[i]);
+    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>与01背包的优化类似，可以将其优化到一维数组，可以降低空间复杂度:</p>
+<p>两者代码对比：</p>
+<p><code>f[i][j] = max(f[i][j],f[i - 1][j - v[i]] + w[i]); // 01背包</code></p>
+<p><code>f[i][j] = max(f[i][j],f[i][j - v[i]] + w[i]); //完全背包</code></p>
+<p><code>但与01背包不同的在于j是从小到大进行枚举，与01背包相反</code></p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for(int i = 1;i &lt;= n;i++)
+       for(int j = v[i];j &lt;= m;j++){  
+           // f[j] = f[j];
+           //f[i][j] = f[i-1][j]
+           //当前就是第i层 f[i-1][j] 是上一层已经算过的值
+
+           f[j] = max(f[j],f[j - v[i]] + w[i]);
+           //             f[i][j] = max(f[i][j], f[i][j-v[i]] + w[i])
+           //                              j-v[i] 是当前i层中已经算过的 所以是f[i][j-v[i]]     
+       }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>综上所述，优化后的完全背包的最终写法为:</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+#include&lt;algorithm&gt;
+
+using namespace std;
+
+const int N = 1010;
+int n,m;
+int v[N],w[N];
+int f[N];
+//f[j] 所有从前i件物品中选，总体积不超过j的集合方案数量
+
+int main(){
+    cin &gt;&gt; n &gt;&gt; m;
+    for(int i = 1;i &lt;= n;i++) cin &gt;&gt; v[i] &gt;&gt; w[i];
+    
+    for(int i = 1;i &lt;= n;i++)
+        for(int j = v[i];j &lt;= m;j++)
+            f[j] = max(f[j],f[j - v[i]] + w[i]);
+    
+    cout &lt;&lt; f[m] &lt;&lt; endl;
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="三、多重背包问题"><a href="#三、多重背包问题" class="headerlink" title="三、多重背包问题"></a>三、多重背包问题</h3>
                 
             </div>
             <hr/>
@@ -1136,7 +1224,7 @@ int main(){
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">16.8k</span>&nbsp;字
+                class="white-color">17.5k</span>&nbsp;字
             
             
             
