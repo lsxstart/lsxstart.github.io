@@ -6,7 +6,7 @@
   <link href="https://lsxstart.github.io/atom.xml" rel="self"/>
   
   <link href="https://lsxstart.github.io/"/>
-  <updated>2025-04-21T03:49:18.423Z</updated>
+  <updated>2025-05-08T13:08:56.132Z</updated>
   <id>https://lsxstart.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>24_5_9 组会汇报</title>
+    <link href="https://lsxstart.github.io/archives/ddf56d02.html"/>
+    <id>https://lsxstart.github.io/archives/ddf56d02.html</id>
+    <published>2025-05-08T13:05:44.000Z</published>
+    <updated>2025-05-08T13:08:56.132Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;24-5-9-组会汇报&quot;&gt;&lt;a href=&quot;#24-5-9-组会汇报&quot; class=&quot;headerlink&quot; title=&quot;24_5_9 组会汇报&quot;&gt;&lt;/a&gt;24_5_9 组会汇报&lt;/h3&gt;&lt;h3 id=&quot;任务&quot;&gt;&lt;a href=&quot;#任务&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="组会汇报" scheme="https://lsxstart.github.io/categories/%E7%BB%84%E4%BC%9A%E6%B1%87%E6%8A%A5/"/>
+    
+    
+    <category term="组会" scheme="https://lsxstart.github.io/tags/%E7%BB%84%E4%BC%9A/"/>
+    
+    <category term="论文经验" scheme="https://lsxstart.github.io/tags/%E8%AE%BA%E6%96%87%E7%BB%8F%E9%AA%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文阅读_ CDIP-ChatGLM3：集成计算机视觉和语言建模的双模型方法，用于作物病害识别和处方</title>
+    <link href="https://lsxstart.github.io/archives/995740c3.html"/>
+    <id>https://lsxstart.github.io/archives/995740c3.html</id>
+    <published>2025-05-08T03:41:40.178Z</published>
+    <updated>2025-05-08T13:11:28.363Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;CDIP-ChatGLM3：-集成计算机视觉和语言建模的双模型方法，用于作物病害识别和处方&quot;&gt;&lt;a href=&quot;#CDIP-ChatGLM3：-集成计算机视觉和语言建模的双模型方法，用于作物病害识别和处方&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="论文阅读" scheme="https://lsxstart.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
+    
+    
+    <category term="论文" scheme="https://lsxstart.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
   
   <entry>
     <title>动态规划_背包问题</title>

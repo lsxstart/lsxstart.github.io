@@ -1,3 +1,5 @@
+https://lsxstart.github.io/archives/995740c3.html
+https://lsxstart.github.io/archives/ddf56d02.html
 https://lsxstart.github.io/archives/43cd3863.html
 https://lsxstart.github.io/archives/bbb1aa8.html
 https://lsxstart.github.io/archives/6be25c2a.html
@@ -27,6 +29,11 @@ https://lsxstart.github.io/tags/commonlife/
 https://lsxstart.github.io/tags/%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/
 https://lsxstart.github.io/tags/c/
 https://lsxstart.github.io/tags/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/
+https://lsxstart.github.io/tags/%E7%BB%84%E4%BC%9A/
+https://lsxstart.github.io/tags/%E8%AE%BA%E6%96%87%E7%BB%8F%E9%AA%8C/
+https://lsxstart.github.io/tags/%E8%AE%BA%E6%96%87/
 https://lsxstart.github.io/categories/spring/
 https://lsxstart.github.io/categories/acwing/
 https://lsxstart.github.io/categories/commonlife/
+https://lsxstart.github.io/categories/%E7%BB%84%E4%BC%9A%E6%B1%87%E6%8A%A5/
+https://lsxstart.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/
