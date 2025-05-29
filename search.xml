@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>24_5_30组会汇报</title>
+      <link href="/archives/bbc51143.html"/>
+      <url>/archives/bbc51143.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="24-5-30-组会汇报"><a href="#24-5-30-组会汇报" class="headerlink" title="24_5_30 组会汇报"></a>24_5_30 组会汇报</h3><h3 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h3><ol><li>构造了基于豆包、千问、deepseek的小麦数据集</li><li>本地部署了LLaMa Factory，初步了解UI界面</li></ol><h3 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h3><h4 id="数据集构建"><a href="#数据集构建" class="headerlink" title="数据集构建"></a>数据集构建</h4><p>上周由于使用deepseek官方api在生成问题时由于存在敏感数据导致未生成领域标签，于是这周调用Doubao-pro-256k 成功构建出了<mark>领域标签</mark>。</p><p><strong><img src="/archives/bbc51143/image-20250529171345367.png" class=""></strong></p><p>之后，继续利用该模型采用分割文本块生成领域相关问题</p><p><strong><img src="/archives/bbc51143/image-20250529171523164.png" class=""></strong></p><p>随后，调用该模型对这些问题生成答案，情况不容乐观，只有近10分之1的问题成功生成答案，重复该操作，仍出现调用问题，目前还没有查找出原因，之后将未生成答案的问题，换deepseek模型进行问题生成，近乎全部问题生成了答案，同时答案的质量比豆包的相对比较高，但是仍有近10个问题调用失败，于是干脆将剩余问题调用千问来生成答案，最后所有问题都生成答案，初始数据集构造完成。</p><p><strong><img src="/archives/bbc51143/0f32e794c17def722eb97390fcef17c.png" class=""></strong></p><p><strong><img src="/archives/bbc51143/638674306a572a9879dde09b802e594.png" class=""></strong></p><h5 id="数据集之后的打算"><a href="#数据集之后的打算" class="headerlink" title="数据集之后的打算"></a><mark>数据集之后的打算</mark></h5><ol><li><p>逐步进行人工检查，适当进行AI修正。</p></li><li><p>原本的规划是用三个模型分别生成数据集，随后在llama-factory中分别对三种数据集使用对应的模型进行lora微调，但是目前实验出现一定的问题，打算先放置，与 easydataset作者讨论之后，再进行考虑</p><p><strong><img src="/archives/bbc51143/image-20250529172603175.png" class=""></strong></p></li></ol><h4 id="LLaMa-Factory初识"><a href="#LLaMa-Factory初识" class="headerlink" title="LLaMa-Factory初识"></a>LLaMa-Factory初识</h4><p><strong><img src="/archives/bbc51143/image-20250529172820909.png" class=""></strong></p><p>LLaMA Factory 是一个简单易用且高效的大型语言模型训练与微调平台。通过它，用户可以在无需编写任何代码的前提下，在本地完成上百种预训练模型的微调。</p><p>LLaMa-Factory的安装也是颇费精力，走了一些弯路（直接clone仓库后安装依赖，但出现了各种Python依赖冲突问题)，最后发现使用<strong>Conda虚拟环境</strong>可以明显解决依赖冲突。</p><blockquote><p>Conda 是一个开源的跨平台、语言无关的软件包管理系统与环境管理系统。它能方便地安装、运行和更新软件包及其依赖项，还可创建、切换和删除隔离的软件环境，广泛应用于数据科学、机器学习等领域 。 </p><p>安装成功：</p><p><strong><img src="/archives/bbc51143/image-20250529173246355.png" class=""></strong></p></blockquote><p>LLaMa Factory的具体安装就不详细阐述了，安装成功后，打开</p><p> <strong><a href="http://127.0.0.1:7860/">http://127.0.0.1:7860</a></strong> ，可以看到如下界面：</p><p><strong><img src="/archives/bbc51143/image-20250529184525370.png" class=""></strong></p><p>配置比较多，可以分为5个部分：</p><ul><li><p>通用设置：<strong>可以设置 WebUI 展示的语言、需要微调的模型、微调的方法、是否量化、微调的加速方式等配置</strong></p><p><strong><img src="/archives/bbc51143/image-20250529185209158.png" class=""></strong></p></li><li><p>微调训练：</p><p><strong><img src="/archives/bbc51143/image-20250529185241574.png" class=""></strong></p><ul><li><strong>微调训练的阶段</strong>：预训练、指令微调、强化学习等等；</li><li><strong>微调使用的数据集</strong>：数据集的格式、路径、验证集的比例等等；</li><li><strong>关键微调参数</strong>：在我们之前教程中重点学习的：学习率、训练轮数、批量 大小等等；</li><li><strong>LoRA 参数：</strong>当使用 Lora 微调时需要配置的一些特殊参数；</li></ul></li><li><p>模型评估：在完成模型训练后，可以通过此模块来评估模型效果，这里可配置模型评估所需的数据集等：</p><p><strong><img src="/archives/bbc51143/image-20250529185315200.png" class=""></strong></p></li><li><p>在线推理：可以选择使用 huggingface、vllm 等推理引擎和模型在线聊天，主要用来测试加载模型：</p><p><strong><img src="/archives/bbc51143/image-20250529185341191.png" class=""></strong></p></li><li><p>模型导出：可以指定模型、适配器、分块大小、导出量化等级及校准数据集、导出设备、导出目录等。</p></li></ul><p><strong><img src="/archives/bbc51143/image-20250529185402159.png" class=""></strong></p><h3 id="方向"><a href="#方向" class="headerlink" title="方向"></a>方向</h3><ol><li>基础不牢，许多专业知识还是一知半解，但是b站上的相关资源过少，咨询了一个从事大模型后训练的学长之后，打算阅读两本书籍。</li></ol><p><strong><img src="/archives/bbc51143/image-20250529185801868.png" class=""></strong></p><p><a href="https://llmbook-zh.github.io/">https://llmbook-zh.github.io/</a></p><p><strong><img src="/archives/bbc51143/image-20250529185819608.png" class=""></strong></p><ol start="2"><li>继续学习LLaMa-Factory，并进行上手实践。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 组会汇报 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 组会 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>24_5_22 组会汇报</title>
       <link href="/archives/c22fb191.html"/>
       <url>/archives/c22fb191.html</url>
