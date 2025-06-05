@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>24_6_6 组会汇报</title>
+      <link href="/archives/a2a96d06.html"/>
+      <url>/archives/a2a96d06.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="24-6-6-组会汇报"><a href="#24-6-6-组会汇报" class="headerlink" title="24_6_6 组会汇报"></a>24_6_6 组会汇报</h3><h3 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h3><p>学习《大预言模型》中的第三部分：微调与对齐</p><h3 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h3><blockquote><p>LLM 在预训练中已经“见多识广”，但它本质上只是一个通过上下文预测下一个词的系统，<strong>没有明确的任务目标、没有判断对错的能力、更没有人类价值观</strong>。  </p><p>为此，微调让模型“懂任务”，对齐让它“有边界”，二者共同构成了模型落地前的最后一道关键工序。</p></blockquote><h4 id="指令微调：让模型学会听懂任务"><a href="#指令微调：让模型学会听懂任务" class="headerlink" title="指令微调：让模型学会听懂任务"></a>指令微调：让模型学会听懂任务</h4><p><strong>指令微调（Instruction Tuning）</strong>的核心是：通过构造“自然语言任务指令+示例”的训练对，让模型学会“在听懂指令后完成预期输出”。</p><p>它的最大价值在于两点：</p><ol><li><strong>统一输入方式</strong>：不再为每个任务写规则、调模型，而是通过“对话式提示”就能驱动模型；</li><li><strong>泛化能力强</strong>：一个模型即可应对摘要、翻译、问答、推理等多类任务。</li></ol><blockquote><p>示例：  </p><p><strong>指令：</strong>“请将下文翻译为英文。”  </p><p><strong>输入：</strong>“大语言模型正在改变人工智能。”  </p><p><strong>输出：</strong>“Large language models are transforming AI.”</p></blockquote><p>为了适应这种模式，研究者会将各种任务转化为指令格式，包括已有 NLP 数据、合成问答、开放领域提示等。为避免大模型微调成本过高，还引入了<strong>参数高效微调技术</strong>，如：</p><ul><li><strong>LoRA（低秩适配）</strong>：只训练一个小的权重增量模块；</li><li><strong>Prefix Tuning / Adapter Tuning</strong>：只调整少量附加参数，不动主干模型。</li></ul><p>这些技术显著降低了训练成本，使 LLM 可以在中等硬件下快速适配具体任务。</p><h4 id="人类对齐：让模型生成更可靠、更可控"><a href="#人类对齐：让模型生成更可靠、更可控" class="headerlink" title="人类对齐：让模型生成更可靠、更可控"></a>人类对齐：让模型生成更可靠、更可控</h4><p>即使模型能执行任务，它的行为仍可能“不合时宜”——例如胡编事实、输出攻击性内容、误导用户等。<br>这就需要引入<strong>“对齐机制”</strong>：通过人为反馈，明确什么是“理想输出”，什么是“不应出现”的回答，引导模型做出有边界、有责任感的选择。</p><h5 id="关键技术：人类反馈强化学习（RLHF）"><a href="#关键技术：人类反馈强化学习（RLHF）" class="headerlink" title="关键技术：人类反馈强化学习（RLHF）"></a>关键技术：人类反馈强化学习（RLHF）</h5><p>RLHF 是当前主流的对齐方式，流程包括：</p><ol><li><p><strong>采集偏好数据</strong>：人工对模型输出排序，如“回答A &gt; 回答B”；  </p></li><li><p><strong>训练奖励模型</strong>：让模型能自动评估“输出是否被人类喜欢”；  </p></li><li><p><strong>用强化学习优化生成策略</strong>：通过 PPO 等算法提升“好回答”的概率。</p><p><strong><img src="/archives/a2a96d06/image-20250605203549529.png" class=""></strong></p></li></ol><p>这一机制被用于训练如 InstructGPT、ChatGPT，使得 LLM 不仅会完成任务，更能体现“人类偏好”。</p><p>但 RLHF 也存在成本高、流程复杂的问题。因此，近年来也出现了更直接的替代方法，如：</p><ul><li><strong>DPO（Direct Preference Optimization）</strong>：不再训练奖励模型，而是直接用偏好对比数据指导语言模型本身；</li><li><strong>SFT（Supervised Fine-tuning）</strong>：基于专家数据直接监督训练输出，流程简单、效果稳定。</li></ul><h4 id="微调-对齐-x3D-可用的大模型"><a href="#微调-对齐-x3D-可用的大模型" class="headerlink" title="微调 + 对齐 = 可用的大模型"></a>微调 + 对齐 = 可用的大模型</h4><p>整体来看，预训练给了模型“语言的通用能力”，但真正决定它是否可用、是否值得信赖的，是微调与对齐。</p><table><thead><tr><th>阶段</th><th>目的</th><th>技术关键词</th></tr></thead><tbody><tr><td>指令微调</td><td>学会完成任务</td><td>Instruction tuning, LoRA</td></tr><tr><td>人类对齐</td><td>避免出错/伤害</td><td>RLHF, PPO, DPO, SFT</td></tr></tbody></table><h3 id="方向"><a href="#方向" class="headerlink" title="方向"></a>方向</h3><ol><li>本地的CUDA由于空间原因无法下载成功，无法在llama-factory上进行实际应用，查询如何使用云平台的计算资源</li><li>把《大语言模型》读完</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 组会汇报 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 组会 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>24_5_30组会汇报</title>
       <link href="/archives/bbc51143.html"/>
       <url>/archives/bbc51143.html</url>
